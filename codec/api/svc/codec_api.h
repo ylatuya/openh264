@@ -191,6 +191,10 @@ struct ISVCDecoderVtbl {
 };
 #endif
 
+#define CreateSVCEncoder WelsCreateSVCEncoder
+#define DestroySVCEncoder WelsDestroySVCEncoder
+#define CreateDecoder WelsCreateDecoder
+#define DestroyDecoder WelsDestroyDecoder
 
   int  CreateSVCEncoder (ISVCEncoder** ppEncoder);
   void DestroySVCEncoder (ISVCEncoder* pEncoder);
