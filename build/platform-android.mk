@@ -60,4 +60,5 @@ COMMON_INCLUDES += -I$(NDKROOT)/sources/android/cpufeatures
 COMMON_OBJS += $(COMMON_SRCDIR)/cpu-features.$(OBJ)
 
 codec/common/cpu-features.$(OBJ): $(NDKROOT)/sources/android/cpufeatures/cpu-features.c
-	$(QUIET_CC)$(CC) $(CFLAGS) $(INCLUDES) $(COMMON_CFLAGS) $(COMMON_INCLUDES) -c $(CXX_O) $<
+	$(QUIET_CC)$(CC) $(CFLAGS) $(INCLUDES) $(COMMON_CFLAGS) $(COMMON_INCLUDES) \
+	-Dandroid_getCpuIdArm=wels_getCpuIdArm -Dandroid_setCpuArm=wels_setCpuArm -c $(CXX_O) $<
